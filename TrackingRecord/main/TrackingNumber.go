@@ -1,4 +1,5 @@
-package trackingNumber
+package main
+
 import "fmt"
 import "container/list"
 
