@@ -106,3 +106,5 @@ type TrackingNumber struct{
 	func (obj TrackingNumnber) setTransferCode(transferCode char) {
 		obj.transferCode = transferCode
 	}
+	
+}
