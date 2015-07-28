@@ -1,0 +1,174 @@
+Tracking Number tests : 
+
+
+SAMPLE INPUT 1:
+----------------
+First Example
+1 100000 A 1
+12345 12345 B 1
+0
+And Another
+1 100000 A 1
+12345 12345 B 1
+12000 12999 A 2
+12345 12345 B 2
+0
+Test Case Three
+1 100000 A 1
+12345 12345 B 1
+12000 12999 A 2
+12345 12345 B 2
+10000 100000 C 2
+0
+Example Four
+1 100000 A 1
+12345 12345 B 1
+12000 12999 A 2
+12345 12345 B 2
+10000 100000 C 2
+1000000 1999999 Z 99
+0
+Example 5
+1 10 A 1
+21 30 B 1
+11 20 A 1
+0
+Example 6
+21 30 B 1
+1 10 A 1
+11 20 A 2
+0
+Example 7
+12 20 A 1
+21 30 B 1
+1 10 A 1
+0
+END
+
+EXPECTED OUTPUT 1:
+-------------------
+First Example
+1 12344 A 1
+12345 12345 B 1
+12346 100000 A 1
+And Another
+1 11999 A 1
+12000 12344 A 2
+12345 12345 B 2
+12346 12999 A 2
+13000 100000 A 1
+Test Case Three
+1 9999 A 1
+10000 100000 C 2
+Example Four
+1 9999 A 1
+10000 100000 C 2
+1000000 1999999 Z 99
+Example 5
+1 20 A 1
+21 30 B 1
+Example 6
+1 10 A 1
+11 20 A 2
+21 30 B 1
+Example 7
+1 10 A 1
+12 20 A 1
+21 30 B 1
+
+
+SAMPLE INPUT 2:
+------------------
+First Example
+1 100000 A 1
+12345 12345 B 1
+0
+And Another
+1 100000 A 1
+12345 12345 B 1
+12000 12999 A 2
+12345 12345 B 2
+0
+END
+
+
+EXPECTED OUTPUT 2:
+-------------------
+First Example
+1 12344 A 1
+12345 12345 B 1
+12346 100000 A 1
+And Another
+1 11999 A 1
+12000 12344 A 2
+12345 12345 B 2
+12346 12999 A 2
+13000 100000 A 1
+
+
+SAMPLE INPUT 3:
+--------------------
+First Sample
+Second Sample
+
+EXPECTED OUTPUT 3:
+---------------------
+Exception is thrown
+
+
+SAMPLE INPUT 4:
+--------------------
+First Sample
+1 1000 A 1
+END
+
+EXPECTED OUTPUT 4:
+--------------------
+Exception is thrown
+
+
+SAMPLE INPUT 5:
+--------------------
+First Sample
+1 1000 A 1
+0
+0
+
+EXPECTED OUTPUT 5:
+--------------------
+Exception is thrown
+
+
+SAMPLE INPUT 6:
+--------------------
+0
+1 1000 A 1
+0 END
+
+EXPECTED OUPUT 6:
+--------------------
+0
+1 1000 A 1
+
+
+SAMPLE INPUT 7:
+--------------------
+First Sample
+1 100 1 1
+0
+END
+
+EXPECTED OUTPUT 7:
+---------------------
+First Sample
+1 100 1 1
+
+
+SAMPLE INPUT 8:
+---------------------
+First Sample
+1 10000 100 10 1
+
+EXPECTED OUTPUT 8:
+---------------------
+Exception is thrown
