@@ -3,24 +3,28 @@ package main
 import "fmt"
 import "container/list"
 
+func main() {
+	r1 := Range{1, 100000}
+	fmt.Print(r1.getHi())
+}
 
 //import trackingNumber.Range.Relation 
 
-type TrackingNumber struct{
-	statusCode char;
-	transferCode char;
+type TrackingNumber struct {
+	statusCode   string
+	transferCode string
 	TrackingNumberRange Range
-	deleted boolean;
-	
-	func (obj TrackingNumber) TrackingNumber (low int, high int, status_code char, transfer_code char) {
+	deleted bool
+}
+	func (obj TrackingNumber) TrackingNumber (low int, high int, status_code string, transfer_code string) {
 		obj.statusCode = status_code;
 		obj.transferCode = transfer_code;
-		TrackingNumberRange = new Range(low, high);
+		obj.TrackingNumberRange = Range(low, high);
 		obj.deleted = false;
 	}
 	
-	func (obj TrackingNumber) findStringFromTrackingNumber () String {
-		return TrackingNumberRange.getLo() + " "+TrackingNumberRange.getHi() + " "+this.statusCode + " "+this.transferCode;
+	func (obj TrackingNumber) findStringFromTrackingNumber () string {
+		return obj.TrackingNumberRange.getLo() + " "+obj.TrackingNumberRange.getHi() + " "+obj.statusCode + " "+obj.transferCode;
 	}
 
 	
@@ -80,31 +84,31 @@ type TrackingNumber struct{
 	}
 	
 	
-	func (obj TrackingNumber) isDeleted() boolean {
-		return deleted
+	func (obj TrackingNumber) isDeleted() bool {
+		return obj.deleted
 	}
 
-	func (obj TrackingNumber)  setDeleted(deleted boolean) {  //void??
+	func (obj TrackingNumber)  setDeleted(deleted bool) {  //void??
 		obj.deleted = deleted
 	}
 
 	func (obj TrackingNumber) getR() Range {
-		return TrackingNumberRange
+		return obj.TrackingNumberRange
 	}
 
-	func (obj TrackingNumber) getStatusCode() char{
-		return statusCode
+	func (obj TrackingNumber) getStatusCode() string{
+		return obj.statusCode
 	}
 
-	func (obj TrackingNumber) setStatusCode(statusCode char) {
+	func (obj TrackingNumber) setStatusCode(statusCode string) {
 		obj.statusCode = statusCode
 	}
 
-	func (obj TrackingNumber) getTransferCode() char {
-		return transferCode
+	func (obj TrackingNumber) getTransferCode() string {
+		return obj.transferCode
 	}
 
-	func (obj TrackingNumnber) setTransferCode(transferCode char) {
+	func (obj TrackingNumber) setTransferCode(transferCode string) {
 		obj.transferCode = transferCode
 	}
 	
